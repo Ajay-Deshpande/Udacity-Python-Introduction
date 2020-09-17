@@ -317,7 +317,7 @@ def find_path_to_friend(network, user_A, user_B):
 
 #########################################
 
-#To get people palying same games and connecting them
+#To get people playing same games and connecting them
 # Arguments:
 #   network: The network you created with create_data_structure. 
 #   game:  The name of game 
@@ -327,16 +327,16 @@ def find_path_to_friend(network, user_A, user_B):
 #   - If such a game does not exist, return None.
 #   The network with new connections between people playing the same game.
 
-#def MYOP(network,game):
-#    players=[]
-#    for user in network:
-#        if game in network[user]["games"]:
-#            players.append(user)
-#    for i in players:
-#        for j in players:
-#            if not i==j and j not in network[i]["connected"]:
-#                network[i]["connected"].append(j)
-#    return players,network        
+def MYOP(network,game):
+   players=[]
+   for user in network:
+       if game in network[user]["games"]:
+           players.append(user)
+   for i in players:
+       for j in players:
+           if not i==j and j not in network[i]["connected"]:
+               network[i]["connected"].append(j)
+   return players,network        
 ##########################################
 # Replace this with your own procedure! You can also uncomment the lines below
 # to see how your code behaves. Have fun!
